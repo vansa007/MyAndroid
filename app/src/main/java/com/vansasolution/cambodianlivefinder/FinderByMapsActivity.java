@@ -92,10 +92,11 @@ public class FinderByMapsActivity extends FragmentActivity implements OnMapReady
         }
     }
 }
-
 //test comit from vansa
 /*
 ----------=====================
 asdahsldhwl
+<<<<<<< HEAD
 hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhgit
  */
+
