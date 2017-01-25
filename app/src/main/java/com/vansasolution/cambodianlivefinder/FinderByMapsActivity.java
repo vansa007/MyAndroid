@@ -2,6 +2,7 @@ package com.vansasolution.cambodianlivefinder;
 
 import android.*;
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Build;
@@ -22,6 +23,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.MapsInitializer;
@@ -113,6 +115,7 @@ public class FinderByMapsActivity extends FragmentActivity implements OnMapReady
     }
 
 
+
     /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
@@ -129,6 +132,13 @@ public class FinderByMapsActivity extends FragmentActivity implements OnMapReady
         String location = new String("Phnom Penh");
         String location_description = new String("The bigest city of Cambodia");
 
+        mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+            @Override
+            public void onInfoWindowClick(Marker marker) {
+                Intent detailHouse = new Intent(FinderByMapsActivity.this, DetailHouse.class);
+                startActivity(detailHouse);
+            }
+        });
 
         // Add a marker in Sydney and move the camera
         LatLng phnompenh = new LatLng(11.5739627, 104.8789607);
