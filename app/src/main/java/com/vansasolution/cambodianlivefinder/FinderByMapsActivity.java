@@ -140,6 +140,8 @@ public class FinderByMapsActivity extends FragmentActivity implements OnMapReady
             }
         });
 
+        //vansa step over king
+
         // Add a marker in Sydney and move the camera
         LatLng phnompenh = new LatLng(11.5739627, 104.8789607);
         mMap.addMarker(new MarkerOptions().position(phnompenh).title("Marker in Phnom Penh"));
